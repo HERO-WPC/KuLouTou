@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.hero'
+version = '6.66'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'spigot-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21.8-R0.1-SNAPSHOT'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveBaseName.set("klt")
+    archiveVersion.set("6.66")
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
