@@ -17,23 +17,9 @@ public class klt extends JavaPlugin {
         getLogger().info("klt 已启用666！");
     }
 
+    // 处理 /nb 指令
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        // /xiangyaole 指令给玩家一个头
-        if (cmd.getName().equalsIgnoreCase("xiangyaole")) {
-            if (sender instanceof Player) {
-                Player player = (Player) sender;
-                ItemStack witherSkeletonHead = new ItemStack(Material.WITHER_SKELETON_SKULL);
-                player.getInventory().addItem(witherSkeletonHead);
-                player.sendMessage("666白嫖一个头");
-                return true;
-            } else {
-                sender.sendMessage("此命令只能由玩家执行!");
-                return false;
-            }
-        }
-
-        // /nb 指令 夸赞
         if (cmd.getName().equalsIgnoreCase("nb")) {
             sender.sendMessage("you nb");
             sender.sendMessage("your mom nb");
@@ -41,24 +27,18 @@ public class klt extends JavaPlugin {
             sender.sendMessage("周围摆煤炭中间放石头！");
             return true;
         }
-
         return false;
     }
 
+    // 添加合成表
     private void addWitherSkeletonHeadRecipe() {
-        ItemStack witherHead = new ItemStack(Material.WITHER_SKELETON_SKULL);
+        ItemStack result = new ItemStack(Material.WITHER_SKELETON_SKULL, 1);
 
-        ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(this, "wither_skeleton_head"), witherHead);
-        recipe.shape("SSS", "SCS", "SSS");
-        recipe.setIngredient('S', Material.STONE);
+        ShapedRecipe recipe = new ShapedRecipe(new NamespacedKey(this, "wither_skull"), result);
+        recipe.shape("CCC", "CSC", "CCC");
         recipe.setIngredient('C', Material.COAL);
+        recipe.setIngredient('S', Material.STONE);
 
         getServer().addRecipe(recipe);
     }
-
-    @Override
-    public void onDisable() {
-        getLogger().info("klt 已卸载999！");
-    }
 }
-
