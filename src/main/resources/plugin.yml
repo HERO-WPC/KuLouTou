@@ -4,6 +4,9 @@ version: 1.0
 api-version: 1.21
 
 commands:
+  xiangyaole:
+    description: 获取一个凋零骷髅头
+    usage: /xiangyaole
   nb:
-    description: you nb 八个石头围着一个煤
-
+    description: 你猜
+    usage: /nb

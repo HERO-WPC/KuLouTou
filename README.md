@@ -4,11 +4,47 @@
 * # Linux / macOS 示例
 
   
-```yaml
-# bash
-wget https://services.gradle.org/distributions/gradle-8.5-bin.zipunzip gradle-8.5-bin.zip -d /opt/gradleexport PATH=/opt/gradle/gradle-8.5/bin:$PATH
+先检查 Java
 
-```
+java -version
+
+
+Gradle推荐 JDK 21
+如果没安装，先装 OpenJDK：
+
+sudo apt update
+sudo apt install openjdk-21-jdk -y
+
+
+下载最新版 Gradle
+去 Gradle 官方下载页
+ 找最新版本
+
+
+
+解压到 /opt/gradle
+
+
+
+
+
+配置环境变量
+编辑 ~/.bashrc 或 ~/.zshrc：
+
+export PATH=$PATH:/opt/gradle/gradle你的版本/bin
+
+
+然后刷新：
+
+source ~/.bashrc
+
+
+验证
+
+gradle -v
+
+
+如果显示最新版本，说明安装成功 ✅
 * 打包 
  
  ```bash

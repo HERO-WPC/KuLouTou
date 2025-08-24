@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.hero'
-version = '6.66'
+version = '66.66'
 
 java {
     toolchain {
@@ -29,7 +29,7 @@ tasks.withType(JavaCompile) {
 
 jar {
     archiveBaseName.set("klt")
-    archiveVersion.set("6.66")
+    archiveVersion.set("66.66")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
