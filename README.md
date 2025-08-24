@@ -9,8 +9,8 @@
 wget https://services.gradle.org/distributions/gradle-8.5-bin.zipunzip gradle-8.5-bin.zip -d /opt/gradleexport PATH=/opt/gradle/gradle-8.5/bin:$PATH
 
 ```
-
 * ```bash
 # 执行命令
 ```
-* gradle clean build
+#bash
+gradle clean build
