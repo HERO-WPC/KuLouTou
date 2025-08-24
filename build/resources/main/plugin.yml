@@ -1,0 +1,9 @@
+name: klt
+main: com.hero.klt.klt
+version: 1.0
+api-version: 1.21
+
+commands:
+  nb:
+    description: 你猜
+    usage: /nb
