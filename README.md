@@ -1,4 +1,4 @@
-# KuLouTou
+# KuLouTou 仅支持paper其他不知道
 * 添加凋零骷髅头合成：周围一圈煤中间是石头
 * 打包：安装gradle
 * # Linux / macOS 示例
