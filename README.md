@@ -7,4 +7,4 @@
 * ```bash
 # gradle clean build
 ```
-* jar文件输出在build/libs/内
+* gradle clean build
