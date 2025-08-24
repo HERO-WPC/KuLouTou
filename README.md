@@ -4,5 +4,7 @@
 * # Linux / macOS 示例
 
  wget https://services.gradle.org/distributions/gradle-8.5-bin.zipunzip gradle-8.5-bin.zip -d /opt/gradleexport PATH=/opt/gradle/gradle-8.5/bin:$PATH
-* gradle clean build
+* ```bash
+# gradle clean build
+```
 * jar文件输出在build/libs/内
