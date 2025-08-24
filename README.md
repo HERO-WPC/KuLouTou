@@ -50,5 +50,12 @@ gradle -v
  ```bash
 #bash
 gradle clean build
+
 ```
+* 指令
+/xiangyaole:给玩家一个凋零骷髅头
+/nb:你猜（无害）
+
+* 加了个合成表
+周围摆煤炭中间放石头
 
